@@ -1,0 +1,41 @@
+
+
+student
+										foreign key
+rollno	name		phone		email			address		c_id
+1	ashok		98887787878	ashok@gmail.com		jaipur		111
+2	suresh		98778788787	suresh@gmail.com	jodhpur		222
+3	puneet		92828828288	puneet@gmail.com	sikar		null
+
+course
+primary key
+c_id	c_name		c_fees		c_duration		c_description
+111	php		12000		3 months		website development
+222	java		14000		4 months		website developement
+333	hacking		19000		3 months		security
+------------------------------------------------------------------------------------------------
+create table course(c_id int primary key,c_name varchar(50), c_fees int,c_duration varchar(50),c_description varchar(50));
+
+insert into course values(111,'php',12000,'3 months','website developement'),(222,'java',14000,'4 months','website developement'),(333,'hacking',19000,'3 months','security');
+
+create table student(rollno int primary key AUTO_INCREMENT,name varchar(50),phone varchar(50),email varchar(50),address varchar(50),c_id int,foreign key(c_id) REFERENCES course(c_id));
+
+insert into student(name,phone,email,address,c_id) values('ashok','828982828','ashok@gmail.com','jaipur',111),('suresh','9288288288','suresh@gmail.com','jodhpur',222),('puneet','2828882828','puneet@gmail.com','sikar',null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

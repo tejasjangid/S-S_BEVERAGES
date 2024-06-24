@@ -1,0 +1,113 @@
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+frame.geometry("400x400")
+frame.mainloop()
+-------------------------------------------------------------------
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+l=Label(text="enter name")
+f=Entry()
+
+l.place(x=100,y=100)
+f.place(x=200,y=100)
+
+frame.geometry("400x400")
+frame.mainloop()
+---------------------------------------------------------------------
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+l=Label(text="enter password:")
+f=Entry(show="*")
+
+l.place(x=100,y=100)
+f.place(x=200,y=100)
+
+frame.geometry("400x400")
+frame.mainloop()
+-----------------------------------------------------------------------
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+b1=Radiobutton(text="male",value=1)
+b2=Radiobutton(text="female",value=2)
+
+b1.place(x=100,y=100)
+b2.place(x=100,y=130)
+
+frame.geometry("400x400")
+frame.mainloop()
+--------------------------------------------------------------------------
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+b1=Checkbutton(text="Cricket")
+b2=Checkbutton(text="football")
+
+b1.place(x=100,y=100)
+b2.place(x=100,y=130)
+
+frame.geometry("400x400")
+frame.mainloop()
+---------------------------------------------------------------------------
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+b=Button(text="click")
+b.place(x=100,y=100)
+
+frame.geometry("400x400")
+frame.mainloop()
+______________________________________________________________________________
+
+from tkinter import *
+import tkinter
+
+frame=Tk()
+
+l=Label(text="enter name:") # name
+f=Entry(show="")
+
+l.place(x=100,y=100)
+f.place(x=200,y=100)
+
+l=Label(text="enter password:") # password
+f=Entry(show="*")
+
+l.place(x=100,y=150)
+f.place(x=200,y=150)
+
+b1=Radiobutton(text="male",value=1) # gender selector
+b2=Radiobutton(text="female",value=2)
+
+b1.place(x=100,y=200)
+b2.place(x=100,y=230)
+
+
+b1=Radiobutton(text="singing",value=1)
+b2=Radiobutton(text="dancing",value=2)
+
+b1.place(x=100,y=300)
+b2.place(x=100,y=330)
+
+
+
+b=Button(text="submit") # submit button
+b.place(x=200,y=370)
+
+frame.geometry("400x400")
+frame.mainloop()

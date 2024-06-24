@@ -1,0 +1,47 @@
+from tkinter import *
+import tkinter
+import MySQLdb
+from tkinter import messagebox
+
+def insertrecord():
+    db=MySQLdb.connect("localhost","root","","samyak")
+    cursor=db.cursor()
+    name=fname.get()
+    email=femail.get()
+    addr=faddr.get()
+
+    sql="insert into emp123(name,email,address) values(%s,%s,%s)"
+    info=[name,email,addr]
+
+    cursor.execute(sql,info)
+    messagebox.showinfo("message","data successfully inserted")
+    db.commit()
+    db.close()
+
+frame=Tk()
+
+lname=Label(text="enter name:") # name
+fname=Entry(show="")
+
+lname.place(x=100,y=100)
+fname.place(x=200,y=100)
+
+lemail=Label(text="enter email:") # email
+femail=Entry()
+
+lemail.place(x=100,y=150)
+femail.place(x=200,y=150)
+
+laddr=Label(text="enter address:") # password
+faddr=Entry()
+
+laddr.place(x=100,y=200)
+faddr.place(x=200,y=200)
+
+
+b=Button(text="insert",command=insertrecord) # submit button
+b.place(x=200,y=300)
+
+frame.geometry("400x400")
+frame.mainloop()
+----------------------------------------------------------------------------------------------------------
